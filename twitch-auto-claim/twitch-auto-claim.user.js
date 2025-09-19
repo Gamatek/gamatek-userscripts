@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AutoClaimTwitch
 // @namespace    http://tampermonkey.net/
-// @version      2.0.1
+// @version      1.0.0 (2.0.1)
 // @updateURL    https://github.com/Gamatek/gamatek-userscripts/twitch-auto-claim/twitch-auto-claim.user.js
 // @downloadURL  https://github.com/Gamatek/gamatek-userscripts/twitch-auto-claim/twitch-auto-claim.user.js
 // @description  Will automatically click the button for claiming channel points on Twitch.
@@ -22,8 +22,8 @@
 
     function log(...args) {
         console.log(
-            "%cAuto Claim Twitch Channel Points",
-            "background: #00db84; color: #000000;",
+            "%c TwitchAutoClaim %c",
+            "background: #00db84; color: #000000;", null,
             ...args
         );
     };
