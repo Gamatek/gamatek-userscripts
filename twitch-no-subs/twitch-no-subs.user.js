@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         TwitchNoSubs
 // @namespace    http://tampermonkey.net/
-// @version      1.0.0 (0.9.2)
+// @version      1.0.0
 // @updateURL    https://github.com/Gamatek/gamatek-userscripts/twitch-no-subs/twitch-no-subs.user.js
 // @downloadURL  https://github.com/Gamatek/gamatek-userscripts/twitch-no-subs/twitch-no-subs.user.js
 // @description  Show sub only VOD on Twitch.
