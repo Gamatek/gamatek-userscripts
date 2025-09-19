@@ -17,7 +17,7 @@
     if (window.__TNS_USERSCRIPT_INSTALLED__) return;
     window.__TNS_USERSCRIPT_INSTALLED__ = true;
 
-    const patch_url = "https://cdn.jsdelivr.net/gh/besuper/TwitchNoSub@master/src/patch_amazonworker.js";
+    const patch_url = "https://raw.githubusercontent.com/Gamatek/gamatek-userscripts/refs/heads/main/twitch-no-subs/patch_amazonworker.js";
 
     // From vaft script (https://github.com/pixeltris/TwitchAdSolutions/blob/master/vaft/vaft.user.js#L299)
     function getWasmWorkerJs(twitchBlobUrl) {
