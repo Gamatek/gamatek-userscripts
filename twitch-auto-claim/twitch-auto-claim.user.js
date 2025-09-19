@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         AutoClaimTwitch
 // @namespace    http://tampermonkey.net/
-// @version      1.0.0
-// @updateURL    https://github.com/Gamatek/gamatek-userscripts/auto-claim-twitch/auto-claim-twitch.user.js
-// @downloadURL  https://github.com/Gamatek/gamatek-userscripts/auto-claim-twitch/auto-claim-twitch.user.js
+// @version      2.0.1
+// @updateURL    https://github.com/Gamatek/gamatek-userscripts/twitch-auto-claim/twitch-auto-claim.user.js
+// @downloadURL  https://github.com/Gamatek/gamatek-userscripts/twitch-auto-claim/twitch-auto-claim.user.js
 // @description  Will automatically click the button for claiming channel points on Twitch.
 // @author       Gamatek
 // @match        https://*.twitch.tv/*
-// @icon         https://github.com/Gamatek/gamatek-userscripts/auto-claim-twitch/icon.png
+// @icon         https://github.com/Gamatek/gamatek-userscripts/twitch-auto-claim/icon.png
 // @grant        none
 // ==/UserScript==
 
