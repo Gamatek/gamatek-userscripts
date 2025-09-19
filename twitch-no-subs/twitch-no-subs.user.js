@@ -7,7 +7,7 @@
 // @description  Show sub only VOD on Twitch.
 // @author       Gamatek
 // @match        https://*.twitch.tv/*
-// @icon         https://github.com/Gamatek/gamatek-userscripts/twitch-no-subs/icon.png
+// @icon         https://raw.githubusercontent.com/Gamatek/gamatek-userscripts/refs/heads/main/twitch-no-subs/icon.png
 // @grant        none
 // ==/UserScript==
 

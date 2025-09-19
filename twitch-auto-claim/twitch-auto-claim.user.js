@@ -7,7 +7,7 @@
 // @description  Will automatically click the button for claiming channel points on Twitch.
 // @author       Gamatek
 // @match        https://*.twitch.tv/*
-// @icon         https://github.com/Gamatek/gamatek-userscripts/twitch-auto-claim/icon.png
+// @icon         https://raw.githubusercontent.com/Gamatek/gamatek-userscripts/refs/heads/main/twitch-auto-claim/icon.png
 // @grant        none
 // ==/UserScript==
 
