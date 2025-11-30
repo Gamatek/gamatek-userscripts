@@ -1,5 +1,15 @@
 # gamatek-userscripts
 
+# Tampermonkey
+
+| Browser | Link  |
+| ------- | ----- |
+| Chrome  | https://chromewebstore.google.com/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo |
+| Edge    | https://microsoftedge.microsoft.com/addons/detail/iikmkjmpaadaobahmlepeloendndfphd |
+| Firefox | https://addons.mozilla.org/en-US/firefox/addon/tampermonkey |
+| Safari  | https://apps.apple.com/app/tampermonkey/id6738342400 |
+| Opera Next | https://addons.opera.com/en/extensions/details/tampermonkey-beta |
+
 | Name                                                                                                                                                                                          | Description                                                                | Version | Links                                                                                                                                                                                                              |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |-------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | <img src="https://raw.githubusercontent.com/Gamatek/gamatek-userscripts/refs/heads/main/h264ify/icon128.png" width="16" height="16" align="center">                  h264ify                  | Makes YouTube stream H.264 videos instead of VP8/VP9 videos.               | 2.0.1   | [Install](https://github.com/Gamatek/gamatek-userscripts/raw/refs/heads/main/h264ify/h264ify.user.js)                                   [Source](https://github.com/erkserkserks/h264ify)                          |

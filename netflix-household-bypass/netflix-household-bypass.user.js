@@ -1,21 +1,21 @@
 // ==UserScript==
 // @name         NetflixHouseholdBypass
-// @namespace    http://tampermonkey.net/
-// @version      1.0.0
-// @updateURL    https://github.com/Gamatek/gamatek-userscripts/netflix-household-bypass/netflix-household-bypass.user.js
-// @downloadURL  https://github.com/Gamatek/gamatek-userscripts/netflix-household-bypass/netflix-household-bypass.user.js
 // @description  Blocks GraphQL on /watch, hides modal on /browse.
-// @author       Gamatek
-// @match        https://*.netflix.com/*
 // @icon         https://raw.githubusercontent.com/Gamatek/gamatek-userscripts/refs/heads/main/netflix-household-bypass/icon128.png
+// @version      1.0.0
+
+// @author       Gamatek
+// @namespace    https://github.com/Gamatek
+// @downloadURL  https://github.com/Gamatek/gamatek-userscripts/netflix-household-bypass/netflix-household-bypass.user.js
+// @updateURL    https://github.com/Gamatek/gamatek-userscripts/netflix-household-bypass/netflix-household-bypass.user.js
+
+// @match        https://*.netflix.com/*
 // @run-at       document-start
-// @grant        none
 // ==/UserScript==
 
 (function () {
     "use strict";
 
-    const GRAPHQL_URL = "https://web.prod.cloud.netflix.com/graphql";
     const WATCH_PATH = "/watch/";
     const MODAL_SELECTOR = ".nf-modal.interstitial-full-screen";
     const BACKGROUND_SELECTOR = ".nf-modal-background[data-uia='nf-modal-background']";

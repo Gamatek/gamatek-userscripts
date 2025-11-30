@@ -1,14 +1,16 @@
 // ==UserScript==
 // @name         TwitchNoSubs
-// @namespace    http://tampermonkey.net/
+// @description  Show sub only VOD on Twitch.
+// @icon         https://raw.githubusercontent.com/Gamatek/gamatek-userscripts/refs/heads/main/twitch-no-subs/icon128.png
 // @version      1.0.0
+
+// @author       Gamatek
+// @namespace    https://github.com/Gamatek
 // @updateURL    https://github.com/Gamatek/gamatek-userscripts/twitch-no-subs/twitch-no-subs.user.js
 // @downloadURL  https://github.com/Gamatek/gamatek-userscripts/twitch-no-subs/twitch-no-subs.user.js
-// @description  Show sub only VOD on Twitch.
-// @author       Gamatek
+
 // @match        https://*.twitch.tv/*
-// @icon         https://raw.githubusercontent.com/Gamatek/gamatek-userscripts/refs/heads/main/twitch-no-subs/icon128.png
-// @grant        none
+// @run-at       document-start
 // ==/UserScript==
 
 (function () {
