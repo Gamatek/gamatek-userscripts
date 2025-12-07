@@ -6,8 +6,8 @@
 
 // @author       Gamatek
 // @namespace    https://github.com/Gamatek
-// @downloadURL  https://github.com/Gamatek/gamatek-userscripts/netflix-household-bypass/netflix-household-bypass.user.js
-// @updateURL    https://github.com/Gamatek/gamatek-userscripts/netflix-household-bypass/netflix-household-bypass.user.js
+// @downloadURL  https://github.com/Gamatek/gamatek-userscripts/raw/refs/heads/main/netflix-household-bypass/netflix-household-bypass.user.js
+// @updateURL    https://github.com/Gamatek/gamatek-userscripts/raw/refs/heads/main/netflix-household-bypass/netflix-household-bypass.user.js
 
 // @match        https://*.netflix.com/*
 // @run-at       document-start

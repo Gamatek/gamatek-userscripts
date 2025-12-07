@@ -6,8 +6,8 @@
 
 // @author       Gamatek
 // @namespace    https://github.com/Gamatek
-// @updateURL    https://github.com/Gamatek/gamatek-userscripts/twitch-auto-claim/twitch-auto-claim.user.js
-// @downloadURL  https://github.com/Gamatek/gamatek-userscripts/twitch-auto-claim/twitch-auto-claim.user.js
+// @updateURL    https://github.com/Gamatek/gamatek-userscripts/raw/refs/heads/main/twitch-auto-claim/twitch-auto-claim.user.js
+// @downloadURL  https://github.com/Gamatek/gamatek-userscripts/raw/refs/heads/main/twitch-auto-claim/twitch-auto-claim.user.js
 
 // @match        https://*.twitch.tv/*
 // @run-at       document-start

@@ -6,8 +6,8 @@
 
 // @author       Gamatek
 // @namespace    https://github.com/Gamatek
-// @updateURL    https://github.com/Gamatek/gamatek-userscripts/twitch-no-subs/twitch-no-subs.user.js
-// @downloadURL  https://github.com/Gamatek/gamatek-userscripts/twitch-no-subs/twitch-no-subs.user.js
+// @updateURL    https://github.com/Gamatek/gamatek-userscripts/raw/refs/heads/main/raw/refs/heads/main/youtube-timeout-bypass/youtube-timeout-bypass.user.js
+// @downloadURL  https://github.com/Gamatek/gamatek-userscripts/raw/refs/heads/main/raw/refs/heads/main/youtube-timeout-bypass/youtube-timeout-bypass.user.js
 
 // @match        https://*.twitch.tv/*
 // @run-at       document-start

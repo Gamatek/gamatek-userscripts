@@ -6,8 +6,8 @@
 
 // @author       Gamatek
 // @namespace    https://github.com/Gamatek
-// @downloadURL  https://github.com/Gamatek/gamatek-userscripts/youtube-timeout-bypass/youtube-timeout-bypass.user.js
-// @updateURL    https://github.com/Gamatek/gamatek-userscripts/youtube-timeout-bypass/youtube-timeout-bypass.user.js
+// @downloadURL  https://github.com/Gamatek/gamatek-userscripts/raw/refs/heads/main/youtube-timeout-bypass/youtube-timeout-bypass.user.js
+// @updateURL    https://github.com/Gamatek/gamatek-userscripts/raw/refs/heads/main/youtube-timeout-bypass/youtube-timeout-bypass.user.js
 
 // @match        https://*.youtube.com/*
 // @run-at       document-start
