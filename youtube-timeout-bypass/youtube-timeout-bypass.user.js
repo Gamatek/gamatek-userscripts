@@ -2,7 +2,7 @@
 // @name         YouTubeTimeoutBypass
 // @description  Reduces YouTube setTimeout delays. (anti-adblock delay bypass)
 // @icon         https://raw.githubusercontent.com/Gamatek/gamatek-userscripts/refs/heads/main/youtube-timeout-bypass/icon128.png
-// @version      1.0
+// @version      1.1.0
 
 // @author       Gamatek
 // @namespace    https://github.com/Gamatek
@@ -16,45 +16,61 @@
 (function() {
     "use strict";
 
-    const originalSetTimeout = window.setTimeout;
+    const _setTimeout = window.setTimeout;
+
+    const TARGET_DELAYS = new Set([5000, 10000, 17000, 18000, 19000, 20000, 30000]);
+    const SUSPICIOUS_PATTERNS = /advancement|advancement_|advancement_ms|advancement_more|advancement_less|advancement_action|advancement_skip|adblock|enforce|penalty|warning|modal|overlay|popup|blocker/i;
+    const CALLBACK_CACHE = new WeakMap();
 
     function isAdRelatedCallback(callback) {
         if (typeof callback !== "function") return false;
 
-        const callbackStr = callback.toString();
-        const suspiciousPatterns = [
-            "advancement",
-            "advancement_",
-            "advancement_ms",
-            "advancement_more_ms",
-            "advancement_less_ms",
-            "advancement_action_",
-            "advancement_more_action_",
-            "advancement_less_action_",
-            "advancement_skip_"
-        ];
-
-        if (callbackStr.includes("[native code]")) {
-            return true;
+        if (CALLBACK_CACHE.has(callback)) {
+            return CALLBACK_CACHE.get(callback);
         };
 
-        return suspiciousPatterns.some((pattern) => callbackStr.toLowerCase().includes(pattern.toLowerCase()));
+        let isAdRelated = false;
+
+        try {
+            const callbackStr = callback.toString();
+            if (callbackStr.includes("[native code]")) {
+                isAdRelated = true;
+            } else {
+                isAdRelated = SUSPICIOUS_PATTERNS.test(callbackStr);
+            };
+        } catch (error) {
+            isAdRelated = true;
+        };
+
+        CALLBACK_CACHE.set(callback, isAdRelated);
+        return isAdRelated;
     };
 
     window.setTimeout = function(callback, delay, ...args) {
-        let newDelay = delay;
+        let newDelay = Number(delay) || 0
 
-        const isTargetDelay = [17000, 18000, 19000, 20000, 30000, 5000, 10000].includes(delay);
-        const isSuspiciousDelay = delay >= 5000 && delay <= 35000;
-
-        if (isTargetDelay || (isSuspiciousDelay && isAdRelatedCallback(callback))) {
-            newDelay = Math.max(1, Math.floor(delay * 0.001));
+        if (TARGET_DELAYS.has(numericDelay)) {
+            newDelay = Math.max(1, Math.floor(numericDelay * 0.001));
+        } else if (numericDelay >= 5000 && numericDelay <= 35000 && isAdRelatedCallback(callback)) {
+            newDelay = Math.max(1, Math.floor(numericDelay * 0.001));
         };
 
-        return originalSetTimeout.call(window, callback, newDelay, ...args);
+        return _setTimeout.call(window, callback, newDelay, ...args);
     };
 
-    window.setTimeout.toString = function() {
-        return originalSetTimeout.toString();
-    };
+    Object.defineProperty(window.setTimeout, "toString", {
+        value: function() {
+            return _setTimeout.toString();
+        },
+        writable: false,
+        configurable: false
+    });
+
+    Object.defineProperty(window.setTimeout, "name", {
+        value: "setTimeout",
+        writable: false,
+        configurable: false
+    });
+
+    Object.setPrototypeOf(window.setTimeout, _setTimeout);
 })();
