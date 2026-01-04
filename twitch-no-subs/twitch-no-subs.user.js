@@ -2,7 +2,7 @@
 // @name         TwitchNoSubs
 // @description  Show sub only VOD on Twitch.
 // @icon         https://raw.githubusercontent.com/Gamatek/gamatek-userscripts/refs/heads/main/twitch-no-subs/icon128.png
-// @version      1.0.0
+// @version      1.0.1
 
 // @author       Gamatek
 // @namespace    https://github.com/Gamatek
@@ -11,13 +11,11 @@
 
 // @match        https://*.twitch.tv/*
 // @run-at       document-start
+// @grant        none
 // ==/UserScript==
 
 (function () {
     'use strict';
-
-    if (window.__TNS_USERSCRIPT_INSTALLED__) return;
-    window.__TNS_USERSCRIPT_INSTALLED__ = true;
 
     const patch_url = "https://cdn.jsdelivr.net/gh/besuper/TwitchNoSub@master/src/patch_amazonworker.js";
 
