@@ -2,7 +2,7 @@
 // @name         NetflixHouseholdBypass
 // @description  Blocks GraphQL on /watch, hides modal on /browse.
 // @icon         https://raw.githubusercontent.com/Gamatek/gamatek-userscripts/refs/heads/main/netflix-household-bypass/icon128.png
-// @version      1.0.0
+// @version      1.0.1
 
 // @author       Gamatek
 // @namespace    https://github.com/Gamatek
@@ -11,6 +11,7 @@
 
 // @match        https://*.netflix.com/*
 // @run-at       document-start
+// @grant        none
 // ==/UserScript==
 
 (function () {
