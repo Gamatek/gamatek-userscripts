@@ -2,7 +2,7 @@
 // @name         YouTubeTimeoutBypass
 // @description  Reduces YouTube setTimeout delays. (anti-adblock delay bypass)
 // @icon         https://raw.githubusercontent.com/Gamatek/gamatek-userscripts/refs/heads/main/youtube-timeout-bypass/icon128.png
-// @version      1.1.0
+// @version      1.1.2
 
 // @author       Gamatek
 // @namespace    https://github.com/Gamatek
@@ -11,6 +11,7 @@
 
 // @match        https://*.youtube.com/*
 // @run-at       document-start
+// @grant        none
 // ==/UserScript==
 
 (function() {
@@ -49,10 +50,10 @@
     window.setTimeout = function(callback, delay, ...args) {
         let newDelay = Number(delay) || 0
 
-        if (TARGET_DELAYS.has(numericDelay)) {
-            newDelay = Math.max(1, Math.floor(numericDelay * 0.001));
-        } else if (numericDelay >= 5000 && numericDelay <= 35000 && isAdRelatedCallback(callback)) {
-            newDelay = Math.max(1, Math.floor(numericDelay * 0.001));
+        if (TARGET_DELAYS.has(delay)) {
+            newDelay = Math.max(1, Math.floor(delay * 0.001));
+        } else if (delay >= 5000 && delay <= 35000 && isAdRelatedCallback(callback)) {
+            newDelay = Math.max(1, Math.floor(delay * 0.001));
         };
 
         return _setTimeout.call(window, callback, newDelay, ...args);
